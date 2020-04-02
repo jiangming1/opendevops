@@ -224,6 +224,7 @@ echo "requirepass ${REDIS_PASSWORD}" >> /etc/redis.conf
 sed -i "s/^daemonize.*$/daemonize yes/g" /etc/redis.conf
 #bind 127.0.0.1 如果是开启的请关闭掉
 systemctl start redis
+systemctl enable redis
 systemctl status redis
 ```
 - 测试 `redis-cli -h 127.0.0.1 -p 6379 -a ${REDIS_PASSWORD}`
