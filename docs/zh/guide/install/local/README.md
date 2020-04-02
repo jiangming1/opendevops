@@ -315,6 +315,8 @@ else
     echo -e "\033[31m [ERROR]: dnsmasq install faild \033[0m"
     exit -6
 fi
+
+chattr -i /etc/resolv.conf
 ```
 
 
